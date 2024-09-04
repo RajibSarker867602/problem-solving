@@ -291,13 +291,13 @@ for (int i = 0; i < n; i++)
     }
 }
 
-for (int i = 0; i<n; i++)
+for (int i = 0; i < n; i++)
 {
     for (int j = myList.Count - 1; j >= 0; j--)
     {
-        if (j == i)
+        if (i == (n - 1 - j))
             rightDiagonal.Add(myList[i][j]);
     }
 }
 
-Console.WriteLine($"Diagonal Difference: {Math.Abs(leftDiagonal.Sum() - rightDiagonal.Sum())}");
+Console.WriteLine(Math.Abs(leftDiagonal.Sum() - rightDiagonal.Sum()));
